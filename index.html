@@ -330,7 +330,7 @@ footer {
 
 <div class="player-container">
   <audio id="radio" crossorigin="anonymous">
-    <source src="https://icecast.lpksadulur.online/live" type="audio/mpeg">
+    <source src="https://edo.lpksadulur.online/live" type="audio/mpeg">
     Browser Anda tidak mendukung pemutar audio.
   </audio>
 
@@ -502,7 +502,7 @@ updateClock();
 
 // --- Update DJ & Lagu ---
 function updateDJ(){
-  fetch('https://icecast.lpksadulur.online/status-json.xsl')
+  fetch('https://edo.lpksadulur.online/status-json.xsl')
   .then(r=>r.json())
   .then(data=>{
     const s = data.icestats.source;
