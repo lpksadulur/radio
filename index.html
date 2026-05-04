@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radio LPK-Sadulur Modern</title>
+<title>Radio LPK-Sadulur</title>
 <link rel="icon" href="image/favicon.png" type="image/png">
 
 <style>
@@ -330,7 +330,8 @@ footer {
 
 <div class="player-container">
   <audio id="radio" crossorigin="anonymous">
-    <source src="https://radio.lpksadulur.online/live" type="audio/mpeg">
+    <source src="https://broadcast.lpksadulur.online/live" type="audio/mpeg">
+    <source src="http://192.168.1.5:8000/live" type="audio/mpeg">
     Browser Anda tidak mendukung pemutar audio.
   </audio>
 
@@ -349,7 +350,7 @@ footer {
 
 <div class="top-buttons">
   <button onclick="window.open('https://lpksadulur.online/website/')">Website</button>
-  <!--<button id="requestBtn">Request</button>-->
+  <button id="requestBtn">Request</button>
 </div>
 
 <div class="slider">
@@ -502,7 +503,7 @@ updateClock();
 
 // --- Update DJ & Lagu ---
 function updateDJ(){
-  fetch('https://edo.lpksadulur.online/status-json.xsl')
+  fetch('https://icecast.lpksadulur.online/status-json.xsl')
   .then(r=>r.json())
   .then(data=>{
     const s = data.icestats.source;
